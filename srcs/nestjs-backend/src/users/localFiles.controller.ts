@@ -26,7 +26,7 @@ export class LocalFilesController {
 		}
 
 		if (user.defaultAvatar) {
-			return ('/usr/src/avatars/default.jpg');
+			return ('/usr/src/avatars/default.png');
 		}
 		else {
 			const file = await this.localFilesService.getFileById(user.avatarId);
@@ -43,10 +43,10 @@ export class LocalFilesController {
 		}
 
 		if (user.defaultAvatar) {
-			const stream = createReadStream('/usr/src/avatars/default.jpg');
+			const stream = createReadStream('/usr/src/avatars/default.png');
 
 			response.set({
-				'Content-Disposition': 'inline; filename=default.jpg',
+				'Content-Disposition': 'inline; filename=default.png',
 				'Content-Type': 'image'
 			});
 
