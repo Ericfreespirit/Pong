@@ -36,7 +36,6 @@ class RoutesHandler extends React.Component {
     return (
       <Routes>
         <Route  path ='/' element={<UsernameRedirect component={<HomePage/>} />} />
-       {/* <Route  path ='/:code' element={<UsernameRedirect component={<HomePage/>} />} /> */}
         <Route  path ='/username' element={<Username/>} />
 
         <Route  path ='/Authenticate2fa' element={<Authenticate2fa/>} />
